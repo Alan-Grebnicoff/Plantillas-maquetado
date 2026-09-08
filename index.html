@@ -7,7 +7,12 @@
 </head>
 <body>
     <header class="arriba">
-        <div class="titulos">
+        <div class="contenedorTitulos">
+            <p class="titulo">Holaaaaa</p>
+            <p class="titulo">Holaaaaa</p>
+            <p class="titulo">Holaaaaa</p>
+            <p class="titulo">Holaaaaa</p>
+            <p class="titulo">Holaaaaa</p>
         </div>
     </header>
     <main>
@@ -16,7 +21,12 @@
             <section class="derecha"></section>
         </article>
         <article class="zona abajo">
-            <section class="seccion video"></section>
+            <section class="seccion contenedorVideo">
+                <div class="video"></div>
+                <div class="contenedorTituloVideo">
+                    <p class="titulo">Descripcion</p>
+                </div>
+            </section>
             <section class="seccion lista"></section>
         </article>
     </main>
@@ -63,16 +73,21 @@ main {
     width: 50vw;
     height: 100%
 }
-.titulos {
-    background-color: yellow;
+.contenedorTitulos {
+    background-color: rgb(250, 177, 21);
     width: 70%;
-    height: 40%;
+    height: 30%;
     margin: 2rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .izquierda {
     background-color: rgb(241, 18, 18);
     margin: 1rem;
-    width: 25%;
+    width: 23%;
     height: 12rem
 }
 .derecha {
@@ -81,8 +96,34 @@ main {
     width: 65%;
     height: 12rem;
 }
+
+.contenedorVideo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .lista {
     background-color: rgb(17, 17, 17)
+}
+.contenedorTituloVideo {
+    background-color: rgb(250, 177, 21);
+    width: 30%;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titulo {
+    background-color: white;
+    font-size: 0.8rem;
+}
+
+.video {
+    background-color: rgb(195, 196, 197);
+    width: 70%;
+    height: 10rem;
 }
 </style>
 </html>
