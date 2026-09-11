@@ -7,25 +7,36 @@
 </head>
 <body>
     <header class="arriba">
-        <div class="contenedorTitulos">
+        <figure class="contenedorTitulos">
+            <p class="titulo plano">Holaaaaa</p>
             <p class="titulo">Holaaaaa</p>
             <p class="titulo">Holaaaaa</p>
             <p class="titulo">Holaaaaa</p>
             <p class="titulo">Holaaaaa</p>
-            <p class="titulo">Holaaaaa</p>
-        </div>
+        </figure>
     </header>
     <main>
         <article class="zona centro">
-            <section class="izquierda"></section>
-            <section class="derecha"></section>
+            <aside class="izquierda">
+                <figure class="foto"></figure>
+                <p class="descripcion plano">Le tengo que preguntar a Ivo si pongo texto o lo dejo como un caja con un numero de ancho</p>
+            </aside>
+            <section class="derecha">
+                <figure class="imagen"></figure>
+                <section class="contenido">
+                    <div class="textoImagen">Esto es una imagen</div>
+                    <p class="texto plano">Aca estoy describiendo la imagen que esta a la izquierda, después hay que preguntarle a Ivo lo mismo que antes</p>
+                </section>
+            </section>
         </article>
         <article class="zona abajo">
             <section class="seccion contenedorVideo">
-                <div class="video"></div>
-                <div class="contenedorTituloVideo">
-                    <p class="titulo">Descripcion</p>
-                </div>
+                <figure class="video">
+                    <span class="play">▶️</span>
+                </figure>
+                <figure class="contenedorTituloVideo">
+                    <p class="titulo">Esto es un video</p>
+                </figure>
             </section>
             <section class="seccion lista"></section>
         </article>
@@ -59,7 +70,7 @@ main {
     padding: 2rem;
     padding-top: 0rem;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap
 }
 .abajo {
     width: 100vw;
@@ -85,16 +96,22 @@ main {
     align-items: center;
 }
 .izquierda {
-    background-color: rgb(241, 18, 18);
+    background-color: rgb(255, 255, 255);
     margin: 1rem;
     width: 23%;
-    height: 12rem
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .derecha {
     background-color: rgb(75, 75, 75);
     margin: 1rem;
+    padding-top: 1rem;
     width: 65%;
     height: 12rem;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .contenedorVideo {
@@ -107,6 +124,38 @@ main {
 .lista {
     background-color: rgb(17, 17, 17)
 }
+.foto {
+    width: 100%;
+    height: 5.5rem;
+    background-color: orangered;
+    border: 1.2rem solid orange;
+}
+.descripcion {
+    text-align: -webkit-right;
+    background-color: gray;
+    line-height: 1.1;
+}
+
+.imagen {
+    width: 40%;
+    height: 10rem;
+    background-color: rgb(14, 24, 24);
+}
+.contenido {
+    width: 50%;
+    height: 5rem;
+}
+
+.video {
+    background-color: rgb(195, 196, 197);
+    width: 70%;
+    height: 10rem;
+    border: 0.5rem solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .contenedorTituloVideo {
     background-color: rgb(250, 177, 21);
     width: 30%;
@@ -115,15 +164,24 @@ main {
     align-items: center;
     justify-content: center;
 }
-.titulo {
-    background-color: white;
+.plano {
     font-size: 0.8rem;
 }
+.textoImagen {
+    background-color: rgb(250, 177, 21);
+}
 
-.video {
-    background-color: rgb(195, 196, 197);
-    width: 70%;
-    height: 10rem;
+.texto {
+    background-color: lightgray;
+    text-align: center;
+}
+
+.titulo {
+    background-color: white;
+}
+
+.play {
+    font-size: 3rem;
 }
 </style>
 </html>
